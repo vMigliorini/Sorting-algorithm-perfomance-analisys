@@ -12,11 +12,12 @@ public class ShellSort {
         for (int gap = n / 2; gap > 0; gap /= 2) {
 
             for (int i = gap; i < n; i++) {
-                int temp  = lista[1];
+                int temp  = lista[i];
                 int j = i;
 
                 while (j >= gap && lista[j - gap] > temp) {
                     lista[j] = lista[j - gap];
+                    j -= gap;
                 }
 
                 lista[j] = temp;
