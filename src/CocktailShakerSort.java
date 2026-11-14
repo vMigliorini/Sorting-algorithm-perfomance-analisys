@@ -1,50 +1,50 @@
+import java.util.Arrays;
+
 public class CocktailShakerSort {
+    int[] lista;
 
-    public static void cocktailSort(int[] vetor) {
+    CocktailShakerSort(int[] entrada_dados) {
+        this.lista = entrada_dados;
+    }
 
+    private void swap(int i, int j) {
+        int temp = lista[i];
+        lista[i] = lista[j];
+        lista[j] = temp;
+    }
+
+    public void sort() {
         int inicio = 0;
-        int fim = vetor.length - 1;
-
+        int fim = lista.length - 1;
         boolean trocou = true;
 
         while (trocou) {
-
             trocou = false;
 
-            // esquerda pra direita
+            // esquerda pra direita: leva o maior para o fim
             for (int i = inicio; i < fim; i++) {
-
-                if (vetor[i] > vetor[i + 1]) {
-
-                    int temp = vetor[i];
-                    vetor[i] = vetor[i + 1];
-                    vetor[i + 1] = temp;
-
+                if (lista[i] > lista[i + 1]) {
+                    swap(i, i + 1);
                     trocou = true;
                 }
             }
-
             fim--;
 
-            // direita pra esquerda
-            if (trocou) {
+            if (!trocou) break;   // já está ordenado
+            trocou = false;
 
-                trocou = false;
-
-                for (int i = fim; i > inicio; i--) {
-
-                    if (vetor[i] < vetor[i - 1]) {
-
-                        int temp = vetor[i];
-                        vetor[i] = vetor[i - 1];
-                        vetor[i - 1] = temp;
-
-                        trocou = true;
-                    }
+            // direita pra esquerda: leva o menor para o início
+            for (int i = fim; i > inicio; i--) {
+                if (lista[i] < lista[i - 1]) {
+                    swap(i, i - 1);
+                    trocou = true;
                 }
-
-                inicio++;
             }
+            inicio++;
         }
+    }
+
+    public void showLista() {
+        System.out.println(Arrays.toString(lista));
     }
 }
