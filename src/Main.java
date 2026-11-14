@@ -3,10 +3,15 @@ void main() {
 
     QuickSort quickSort = new QuickSort(lista);
     ShellSort shellSort = new ShellSort(lista);
+    MergeSort mergeSort = new MergeSort(lista);
+    HeapSort heapSort = new HeapSort(lista);
 
     quickSort.sort();
     quickSort.showLista();
 
     shellSort.sort();
     ShellSort.showLista();
+
+    mergeSort.sort();
+    mergeSort.showLista();
 }
