@@ -1,0 +1,53 @@
+# ===== IntelliJ IDEA =====
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# ===== Saídas de compilação Java =====
+*.class
+bin/
+target/
+build/
+.gradle/
+
+# ===== Pacotes gerados =====
+*.jar
+*.war
+*.ear
+*.nar
+
+# ===== Logs e temporários =====
+*.log
+hs_err_pid*
+replay_pid*
+*.tmp
+*.bak
+*.swp
+*~
+
+# ===== Outras IDEs =====
+.vscode/
+.settings/
+.project
+.classpath
+.metadata/
+nbproject/
+nbbuild/
+nbdist/
+
+# ===== Arquivos de sistema operacional =====
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+# Linux
+.directory
+.Trash-*
