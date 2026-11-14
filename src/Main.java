@@ -6,6 +6,7 @@ void main() {
     MergeSort mergeSort = new MergeSort(lista);
     HeapSort heapSort = new HeapSort(lista);
     TimSort timSort = new TimSort(lista);
+    CocktailShakerSort cocktailShakerSort = new CocktailShakerSort(lista);
 
     quickSort.sort();
     quickSort.showLista();
@@ -21,4 +22,8 @@ void main() {
 
     timSort.sort();
     timSort.showLista();
+
+    cocktailShakerSort.sort();
+    cocktailShakerSort.showLista();
+
 }
