@@ -5,6 +5,7 @@ void main() {
     ShellSort shellSort = new ShellSort(lista);
     MergeSort mergeSort = new MergeSort(lista);
     HeapSort heapSort = new HeapSort(lista);
+    TimSort timSort = new TimSort(lista);
 
     quickSort.sort();
     quickSort.showLista();
@@ -14,4 +15,10 @@ void main() {
 
     mergeSort.sort();
     mergeSort.showLista();
+
+    heapSort.sort();
+    heapSort.showLista();
+
+    timSort.sort();
+    timSort.showLista();
 }
