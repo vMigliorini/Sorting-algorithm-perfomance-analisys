@@ -1,5 +1,9 @@
 void main() {
     int[] lista = {1, 54, 23, 5, 3, 7, 1, 9, 0};
+    int tamanho = 10;
+    int[] conjuntoQuaseOrdenado = GeradorConjunto.gerarConjuntoQuaseOrdenado(tamanho);
+    int[] conjuntoDesordenado = GeradorConjunto.gerarConjuntoDesordenado(tamanho);
+    int[] conjuntoDecrescente = GeradorConjunto.gerarConjuntoDecrescente(tamanho);
 
     QuickSort quickSort = new QuickSort(lista);
     ShellSort shellSort = new ShellSort(lista);
