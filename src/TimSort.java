@@ -82,7 +82,6 @@ public class TimSort {
             int runEnd = findRun(i, n);
             int runLen = runEnd - i;
 
-            // Extend short runs to minRun using insertion sort
             if (runLen < minRun) {
                 int end = Math.min(i + minRun, n);
                 insertionSort(i, end - 1);
@@ -91,7 +90,6 @@ public class TimSort {
             runs.add(new int[]{i, runEnd});
             i = runEnd;
 
-            // Maintain merge balance
             while (runs.size() > 1) {
                 int[] run1 = runs.get(runs.size() - 2);
                 int[] run2 = runs.get(runs.size() - 1);
