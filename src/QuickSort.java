@@ -12,6 +12,19 @@ public class QuickSort {
     }
 
     private int particao(int abaixo, int acima){
+        int meio = abaixo + (acima - abaixo) / 2;
+
+        if (lista[abaixo] > lista[meio]) {
+            swap(abaixo, meio);
+        }
+        if (lista[abaixo] > lista[acima]) {
+            swap(abaixo, acima);
+        }
+        if (lista[meio] > lista[acima]) {
+            swap(meio, acima);
+        }
+        swap(meio, acima);
+
         int pivot = lista[acima];
 
         int i = abaixo - 1;
