@@ -3,11 +3,10 @@ import java.util.Arrays;
 
 public static void main(String[] args) {
 
-    int tamanho = 100;
+    int tamanho = 50_000;
 
     // Conjuntos Quase Ordenados CQO
     int[] conjuntoQuaseOrdenado = GeradorConjunto.gerarConjuntoQuaseOrdenado(tamanho);
-    System.out.println(Arrays.toString(conjuntoQuaseOrdenado));
 
     QuickSort quickSortCQO = new QuickSort(Arrays.copyOf(conjuntoQuaseOrdenado, conjuntoQuaseOrdenado.length));
     ShellSort shellSortCQO = new ShellSort(Arrays.copyOf(conjuntoQuaseOrdenado, conjuntoQuaseOrdenado.length));
@@ -33,7 +32,6 @@ public static void main(String[] args) {
     // Conjuntos Desordenados CD
 
     int[] conjuntoDesordenado = GeradorConjunto.gerarConjuntoDesordenado(tamanho);
-    System.out.println(Arrays.toString(conjuntoQuaseOrdenado));
 
     QuickSort quickSortCD = new QuickSort(Arrays.copyOf(conjuntoDesordenado, conjuntoDesordenado.length));
     ShellSort shellSortCD = new ShellSort(Arrays.copyOf(conjuntoDesordenado, conjuntoDesordenado.length));
@@ -59,7 +57,6 @@ public static void main(String[] args) {
     // Conjuntos em Ordem Decrescente COD
 
     int[] conjuntoDecrescente = GeradorConjunto.gerarConjuntoDecrescente(tamanho);
-    System.out.println(Arrays.toString(conjuntoDecrescente));
 
     QuickSort quickSortCOD = new QuickSort(Arrays.copyOf(conjuntoDecrescente, conjuntoDecrescente.length));
     ShellSort shellSortCOD = new ShellSort(Arrays.copyOf(conjuntoDecrescente, conjuntoDecrescente.length));
